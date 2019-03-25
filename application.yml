@@ -24,3 +24,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+---
+server:
+  port: 9001
+spring:
+  profile: hystrix
+eureka:
+   service-url:
+      defaultZone:   http://localhost:7001/eureka
