@@ -33,4 +33,4 @@ eureka:
   client:
    register-with-eureka: false #不注册到Eureka,不在注册中心显示
    service-url:
-      defaultZone:   http://localhost:7001/eure
+      defaultZone: http://localhost:7001/eureka
