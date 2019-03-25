@@ -47,3 +47,23 @@ eureka:
 feign:
    hystrix:
        enabled: true #开启熔断支持
+---
+server:
+  port: 9527
+spring:
+  application:
+    name: MICROSERVICE-ZUUL-GATEWAY
+  profiles: zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: gateway-9527
+    prefer-ip-address: true #显示的名字而已 如果是true显示的是ip  false显示的localhost 域名
+zuul:
+  routes:
+    wbUser.serviceId: user-provider
+    wbUser.path: /wbUser/**  #/wbUser代表的就是user-provider应用所代表的地址
+  ignored-services: user-provider  # 忽略这个服务，如果要忽略所有的服务， “*”
+  prefix: "/sean"
