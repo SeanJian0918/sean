@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active:
+    - dve
+---
+server:
+  port: 8003
+spring:
+  application:
+    name: USER-PROVIDER
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+---
+spring:
+  profiles:
+    active:
+    - dve
+server:
+  port: 8004
+spring:
+  application:
+    name: USER-PROVIDER
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
