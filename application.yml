@@ -28,7 +28,7 @@ eureka:
 server:
   port: 9001
 spring:
-  profile: ribbon
+  profiles: ribbon
 eureka:
   client:
    registerWithEureka: false #不注册到Eureka,不在注册中心显示
