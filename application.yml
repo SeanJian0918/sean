@@ -28,7 +28,7 @@ eureka:
 server:
   port: 9001
 spring:
-  profile: hystrix
+  profile: ribbon
 eureka:
    service-url:
       defaultZone:   http://localhost:7001/eureka
