@@ -4,7 +4,7 @@ spring:
     - dve
 ---
 server:
-  port: 8002
+  port: 8001
 spring:
   application:
     name: USER-PROVIDER
@@ -15,11 +15,11 @@ eureka:
       defaultZone: http://localhost:7001/eureka
 ---
 server:
-  port: 8001
+  port: 8002
 spring:
   application:
     name: USER-PROVIDER
-  profiles: test
+  profiles: hystrix
 eureka:
   client:
     service-url:
