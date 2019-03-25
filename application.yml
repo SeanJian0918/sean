@@ -9,6 +9,13 @@ spring:
   application:
     name: USER-PROVIDER
   profiles: dve
+spring:
+  application:
+    name: USER-PROVIDER
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
 ---
 server:
   port: 8001
@@ -16,3 +23,7 @@ spring:
   application:
     name: USER-PROVIDER
   profiles: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
